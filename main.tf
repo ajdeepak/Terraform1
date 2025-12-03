@@ -5,5 +5,10 @@ module "vpc" {
     private_subnet_cidr = var.private_subnet_cidr
     azs = var.azs
 
+}
 
+module "compute" {
+    source = "./modules/compute"
+    instance_type = var.instance_type
+    ami_id = var.ami_id
 }
