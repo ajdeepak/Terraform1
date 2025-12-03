@@ -10,3 +10,8 @@ variable "vpc_id" {
   description = "VPC ID to deploy resources into"
   type        = string
 }
+variable "public_subnet" {
+  description = "List of public subnet IDs"
+  type        = list(string)
+}
+
