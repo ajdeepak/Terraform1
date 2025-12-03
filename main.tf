@@ -9,7 +9,9 @@ module "vpc" {
 
 module "compute" {
     source = "./modules/compute"
+    public_subnets = module.vpc.public_subnets
     vpc_id        = module.vpc.vpc_id
     instance_type = var.instance_type
     ami_id = var.ami_id
 }
+
