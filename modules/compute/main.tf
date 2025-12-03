@@ -30,7 +30,7 @@ resource "aws_instance" "web" {
   ami           = var.ami_id
   instance_type = var.instance_type
 
-  subnet_id = module.vpc.public_subnet[count.index]
+  subnet_id = var.public_subnet[count.index]
   associate_public_ip_address = true
 
 
